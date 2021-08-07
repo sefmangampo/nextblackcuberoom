@@ -1,0 +1,14 @@
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../public/cats/black-cat-staring-at-you.jpg") no-repeat, black;
+    background-size: contain;
+    background-position: bottom right;
+    transform: scaleX(-1);
+  }
+  

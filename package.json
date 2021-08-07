@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "11.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "next": "^10.0.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-custom-scrollbar": "^1.0.0",
+    "react-dom": "17.0.2",
+    "react-intersection-observer": "^8.32.0",
+    "sass": "^1.37.5"
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.0.1"
+    "eslint-config-next": "^0.2.4"
   }
 }
