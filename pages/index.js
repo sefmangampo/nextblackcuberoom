@@ -18,6 +18,7 @@ const Home = () => {
             href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,400;1,400&display=swap"
             rel="stylesheet"
           ></link>
+          <title>Black Cube Room</title>
         </Head>
         <section id="quotes" className={styles.topPage}>
           <div className={styles.topPageContainer}>
