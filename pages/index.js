@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Nav from "../components/Nav";
+import TopPage from "../components/IndexPages/TopPage";
 
 import styles from "../styles/Home.module.scss";
 
@@ -19,7 +20,10 @@ const Home = () => {
           ></link>
         </Head>
         <section id="quotes" className={styles.topPage}>
-          section 1
+          <div className={styles.topPageContainer}>
+            <div className={styles.topPageContent}><TopPage /></div>
+
+          </div>
         </section>
         <section id="projects" className={styles.midPage}>
           section 2

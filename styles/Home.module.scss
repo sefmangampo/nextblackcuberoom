@@ -4,9 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-y: scroll;
+
+
 
   section {
     width: 100%;
@@ -17,11 +16,24 @@
     scroll-snap-align: start;
   }
 
+  // .topPageContainer {
+
+  //   display: grid;
+  //   grid-template-columns: 1fr 3fr  2fr 1fr
+  // }
+
+  .topPageContent {
+    grid-column:2/3;
+
+  }
+
   .topPage{
     background: url("../public/cats/black-cat-staring-at-you.jpg") no-repeat, black;
     background-size: contain;
     background-position: bottom right;
   }
+
+
   
   .midPage{
     background: url("../public/cats/white-cat-sleeping.jpg") no-repeat rgb(244,248,247);
@@ -63,4 +75,12 @@
   width: 0;
   height: 0;
   display: none;
+}
+
+@media screen and (min-width: 768px){
+    .topPageContainer {
+
+    display: grid;
+    grid-template-columns: 1fr 3fr  2fr 1fr
+  }
 }

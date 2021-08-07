@@ -11,6 +11,7 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "next": "^10.0.4",
+    "next-images": "^1.8.1",
     "react": "17.0.2",
     "react-custom-scrollbar": "^1.0.0",
     "react-dom": "17.0.2",
@@ -19,6 +20,9 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "^0.2.4"
+    "eslint-config-next": "^0.2.4",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^7.0.1",
+    "url-loader": "^4.1.1"
   }
 }
