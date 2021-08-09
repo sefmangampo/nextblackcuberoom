@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "devextreme": "21.1.5",
+    "devextreme-react": "21.1.5",
     "framer-motion": "^4.1.17",
     "next": "^10.0.4",
     "next-images": "^1.8.1",

@@ -1,10 +1,19 @@
 import Layout from "../components/Layout";
 import "../styles/globals.css";
+
+import { AnimatePresence } from "framer-motion";
+
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <AnimatePresence
+      exitBeforeEnter
+      initial={false}
+      onExitComplete={() => window.scrollTo(0, 0)}
+    >
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AnimatePresence>
   );
 }
 

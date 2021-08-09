@@ -1,0 +1,50 @@
+.gridContainerStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.headerStyle{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.selectBoxGroupStyle{
+    width: 100vw;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.topHeaderStyle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.midHeaderStyle{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: $color-dark-hue;
+    font-size: 16px;
+    margin-bottom: 1em;
+}
+
+.midHeaderStyle p {
+    background: $color-light-hue-trans;
+    margin: 0.25em;
+    padding: 0.15em;
+    
+}
+
+.scrollView {
+    width: 700px;
+}
+
+.dataGrid{
+    width: 700px;
+    opacity: 0.95;
+}

@@ -1,0 +1,18 @@
+.headerStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: #424242;
+}
+
+.worldVaccineContainer{
+    height: 100vh;
+}
+
+.chartStyle{
+    margin-top: 2em;
+    background: $color-secondary;
+    opacity: 0.95;
+    padding: 0.5em
+}

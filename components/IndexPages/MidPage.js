@@ -6,7 +6,7 @@ export default function MidPage({ projects }) {
   const generateProjectList = () => {
     return projects.map((item) => {
       return (
-        <li>
+        <li key={item.id}>
           <div className={midPageStyles["list-item"]}>
             <div className={midPageStyles["list-title"]}> {item.title}</div>
             <div className={midPageStyles["list-description"]}>
