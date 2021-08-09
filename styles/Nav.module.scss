@@ -1,5 +1,5 @@
 .header {
-    background: $color-light-hue;
+    background: $color-light-hue-trans;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -48,12 +48,13 @@
     top: 100%;
     left: 0;
     background: $color-light-hue;
+
     width: 100%;
     display: flex;
     transform: rotate(40deg);
     transform: scale(1,0);
     transform-origin: top;
-    transition: transform 400ms ease-in;
+    transition: transform 250ms ease-in;
 }
 
 .header nav ul {
@@ -101,9 +102,8 @@
     transform: scale(1,1);
 }
 .nav-toggle:checked ~ nav .link{
-    
     opacity: 1;
-    transition: opacity 250ms ease-out 450ms;
+    transition: opacity 250ms ease-out 350ms;
 }
 
 .nav-toggle{
@@ -118,6 +118,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .nav-toggle-label span,

@@ -2,10 +2,12 @@ import Head from "next/head";
 
 import Nav from "../components/Nav";
 import TopPage from "../components/IndexPages/TopPage";
+import BottomPage from "../components/IndexPages/BottomPage";
+import MidPage from "../components/IndexPages/MidPage";
 
 import styles from "../styles/Home.module.scss";
 
-const Home = () => {
+const Home = ({ quotesRes, projects }) => {
   return (
     <>
       <Nav />
@@ -22,19 +24,54 @@ const Home = () => {
         </Head>
         <section id="quotes" className={styles.topPage}>
           <div className={styles.topPageContainer}>
-            <div className={styles.topPageContent}><TopPage /></div>
-
+            <div className={styles.topPageContent}>
+              <TopPage quotesRes={quotesRes} />
+            </div>
           </div>
         </section>
         <section id="projects" className={styles.midPage}>
-          section 2
+          <MidPage projects={projects} />
         </section>
         <section id="about" className={styles.bottomPage}>
-          section3
+          <div className={styles.bottomPageContainer}>
+            <div className={styles.bottomPageContent}>
+              <BottomPage />
+            </div>
+          </div>
         </section>
       </div>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  let response = await fetch("https://type.fit/api/quotes");
+  let quotesRes = await response.json();
+
+  let projects = [{
+    id: 1,
+    title: "Covid Stuff",
+    description: "About world wide infections",
+    slug: "covid"
+  },
+  {
+    id: 2,
+    title: "Blog",
+    description: "Random thoughts",
+    slug: "blog"
+  }]
+
+  if (!quotesRes) {
+    return {
+      notFound: true,
+    };
+  }
+  return {
+    props: {
+      quotesRes,
+      projects
+    },
+  };
 };
 
 export default Home;

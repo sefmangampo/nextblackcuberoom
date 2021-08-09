@@ -1,0 +1,95 @@
+.container {
+    color: $color-light-hue;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+}
+
+.buttonContainer{
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: 5fr 1fr 1fr;
+}
+
+.button{
+    grid-column: 2;
+    background: $color-primary;
+    color:$color-dark-hue;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 300ms;
+}
+
+.button:hover{
+    background: $color-secondary;
+    color: $color-tertiary;
+}
+
+.aboutContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+}
+
+
+.intro {
+
+    display: flex;
+    font-size: 36px;
+    margin-bottom: 1em;
+}
+
+.details{
+    font-size: 20px;
+    display: flex;
+    margin-right: 1.3em;
+    margin-left: 1.3em;
+    text-align: center;
+    flex-direction: column;
+}
+
+.details p {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        color: $color-light-hue;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns:  1fr 2fr 4fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .intro{
+        font-size: 70px;
+        justify-content: center;
+    }
+
+    .details {
+        font-size: 30px;
+        line-height: 0;
+    }
+
+    .aboutContainer {
+        grid-row: 2;
+        grid-column: 3;
+        height: auto;
+        
+    }
+
+    .buttonContainer{
+        grid-row: 3;
+        grid-column: 3;
+    }
+
+
+}

@@ -1,11 +1,13 @@
 .home-container {
   min-height: 100vh;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
 
   section {
     width: 100%;
@@ -16,15 +18,8 @@
     scroll-snap-align: start;
   }
 
-  // .topPageContainer {
-
-  //   display: grid;
-  //   grid-template-columns: 1fr 3fr  2fr 1fr
-  // }
-
   .topPageContent {
     grid-column:2/3;
-
   }
 
   .topPage{
@@ -33,7 +28,11 @@
     background-position: bottom right;
   }
 
-
+  .midPage {
+    height: 100vh;
+    width: 100%;
+  }
+  
   
   .midPage{
     background: url("../public/cats/white-cat-sleeping.jpg") no-repeat rgb(244,248,247);
@@ -48,8 +47,6 @@
     background-position: bottom left;
   
   }
-
-
 }
 
 .home-container::-webkit-scrollbar {
@@ -58,9 +55,6 @@
   height: 0;
   display: none;
 }
-
-
-
 
 .main {
   flex: 1;
@@ -77,9 +71,10 @@
   display: none;
 }
 
+
 @media screen and (min-width: 768px){
     .topPageContainer {
-
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr  2fr 1fr
   }
